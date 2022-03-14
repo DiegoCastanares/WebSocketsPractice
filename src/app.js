@@ -1,9 +1,10 @@
 const express = require("express");
 const { Server } = require("socket.io");
-const ProductManager = require("./Manager/ProductManager.js");
+
+const ProductManagerDB = require("./Manager/ProductManagerDB.js");
 
 //services
-const productService = new ProductManager();
+const productService = new ProductManagerDB();
 const app = express();
 const server = app.listen(8080, () => console.log("Listening on 8080"));
 const io = new Server(server);

@@ -1,4 +1,5 @@
 const socket = io();
+
 let form = document.getElementById("productForm");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -38,7 +39,7 @@ chatForm.addEventListener("submit", (evt) => {
   }
 });
 
-let now = new Date();
+let now = new Date().toLocaleString();
 
 //SOCKETS
 
